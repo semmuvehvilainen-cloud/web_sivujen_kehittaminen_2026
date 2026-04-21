@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Semmun sivu</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .grid-item {
+      background-color: lightgreen;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .box {
+      background-color: lightblue;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .responsive-box {
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .responsive-box {
+        background-color: lightcoral;
+      }
+    }
+
+    @media (min-width: 601px) {
+      .responsive-box {
+        background-color: lightseagreen;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Semmun sivu</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Olen opiskelija laureassa ja tykkään urheilla</p>
+    </section>
+
+    <div class="grid-container">
+      <div class="grid-item">pyöräily</div>
+      <div class="grid-item">frisbeegolf</div>
+      <div class="grid-item">kuntosali</div>
+      <div class="grid-item">lenkeily</div>
+      <div class="grid-item">uiminen</div>
+      <div class="grid-item">jalkapallo</div>
+    </div>
+    <section id="services">
+  <h2>Services</h2>
+
+  <div class="flex-container">
+    <div class="box">opiskelu</div>
+    <div class="box">työ</div>
+    <div class="box">hauskanpito</div>
+  </div>
+
+  <div class="responsive-box">
+    muuta sivun kokoa nähdäksesi muutokset
+  </div>
+</section>
+    <section id="contact">
+  <h2>Contact</h2>
+  <p>Semmu Vehviläinen</p>
+</section>
+  </main>
+
+  <footer>
+    <p>Copyright 2025</p>
+  </footer>
+
+</body>
+</html>
