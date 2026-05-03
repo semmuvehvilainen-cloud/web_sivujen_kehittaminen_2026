@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+<h1>semmun sivu</h1>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Brand</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,21 +20,113 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="eka_sivu.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+<div class="container">
+  <div class="row mb-4">
+    <div class="col-md-4 col-12 p-2 bg-light border">Column 1</div>
+    <div class="col-md-4 col-12 p-2 bg-light border">Column 2</div>
+    <div class="col-md-4 col-12 p-2 bg-light border">Column 3</div>
+  </div>
+</div>
 
-</head>
-<body>
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<button type="button" class="btn btn-primary" onclick="showJoke()">joke</button>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<p id="jokeText" class="mt-3"></p>
+
+<script>
+const jokes = [
+  "Miksi Liisa putosi keinusta? koska hänellä ei ole käsiä.   kop kop. kuka siellä? ei ainakaan Liisa.",
+  "paistoin kerran peuraa. se paloi poroksi. lopputulos oli hirveä.",
+  "Miksi mustekala on aina kännissä? Koska sillä on kahdeksan lonkeroa.",
+  "Mikä on maailman chillein eläin? Yo zen."
+];
+
+function showJoke() {
+  const randomIndex = Math.floor(Math.random() * jokes.length);
+  document.getElementById("jokeText").textContent = jokes[randomIndex];
+}
+</script>
+
+<button class="btn btn-secondary" onclick="changeBackground()">
+  Change Background Color
+</button>
+
+<script>
+function changeBackground() {
+  const colors = [
+    "#ffadad", "#ffd6a5", "#fdffb6", "#caffbf",
+    "#9bf6ff", "#a0c4ff", "#bdb2ff", "#ffc6ff", "#fffffc"
+  ];
+
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.backgroundColor = randomColor;
+}
+
+
+</script>
+<button class="btn btn-success" onclick="bugPage()">surprise</button>
+
+<p id="msg" style="display:none; font-size:2rem; text-align:center;">
+  😄 pränkki!
+</p>
+
+<script>
+function bugPage() {
+  const msg = document.getElementById("msg"); 
+
+  document.body.style.transition = "transform 0.1s, opacity 0.5s";
+
+  let count = 0;
+
+  const glitch = setInterval(() => {
+    const x = (Math.random() - 0.5) * 20;
+    const y = (Math.random() - 0.5) * 20;
+
+    document.body.style.transform = `translate(${x}px, ${y}px)`;
+
+    count++;
+
+    if (count > 20) {
+      clearInterval(glitch);
+
+      document.body.style.transform = "translate(0,0)";
+      document.body.style.opacity = "0";
+
+      setTimeout(() => {
+        msg.style.display = "block";
+        document.body.style.opacity = "1";
+      }, 2000);
+
+      setTimeout(() => {
+        msg.style.display = "none";
+      }, 3500);
+    }
+  }, 80);
+}
+</script>
+    
+
+<div class="card" style="width: 18rem;">
+  <img src="oma_kuva.jpg" class="card-img-top" alt="oma kuva" width="100" height="200">
+  <div class="card-body">
+    <h5 class="card-title">Semmun sivu</h5>
+    <p class="card-text">tästä päsee ihan ekaan työpajaan</p>
+    <a href="eka_sivu.html" class="btn btn-primary">toinen sivu</a>
+  </div>
+</div>
+ 
+
+
+<div class="alert alert-info" role="alert">
+  A simple info alert—check it out!
+</div>
 
 </body>
 </html>
