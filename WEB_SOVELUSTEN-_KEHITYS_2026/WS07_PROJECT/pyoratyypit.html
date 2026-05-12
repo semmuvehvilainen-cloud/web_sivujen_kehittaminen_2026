@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pyörätyypit</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+
+    .page-title {
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white; 
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+  
+    body {
+      font-family: Arial, sans-serif;
+            margin: 20px;
+      background-image: url('pyorat.jpg');
+      background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            height: 100vh;
+    }
+
+    .page-title {
+      text-align: center;
+      margin: 30px 0;
+      background: rgba(0,0,0,0.6);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 12px;
+    }
+
+    .card {
+      background-color: #1e293b;
+      color: white;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+    }
+
+    .card img {
+      border-radius: 10px;
+    }
+
+    .navbar {
+      backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+  <div class="container-fluid">
+
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Etusivu</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active text-white" href="pyoratyypit.html">Pyörätyypit</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-light" href="hyodyt.html">Hyödyt</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-light" href="tarvikkeet.html">Tarvikkeet</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-light" href="kohteet.html">Kohteet</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+<div class="text-center">
+  <h1 class="page-title">🚴‍♂️ Pyörätyypit</h1>
+</div>
+
+
+<div class="container mt-4">
+  <div class="row g-4">
+
+    
+ <div class="col-md-3">
+  <div class="card p-3 h-100 text-center shadow-sm" data-bs-toggle="modal" data-bs-target="#maastopyoraModal" style="cursor:pointer;">
+    <img src="maastopyora.jpg" class="img-fluid mb-2" alt="Maastopyörä">
+    <h4>⛰️ Maastopyörä</h4>
+    <p>Sopii metsään ja vaikeille reiteille.</p>
+  </div>
+</div>
+
+<div class="modal fade" id="maastopyoraModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">⛰️ Maastopyörä</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <img src="maastopyora.jpg" class="img-fluid mb-3" alt="Maastopyörä">
+
+        <p>Maastopyörä on suunniteltu epätasaisille reiteille kuten metsään ja vuoristoon.</p>
+
+        <ul>
+          <li>✔ Leveät renkaat</li>
+          <li>✔ Iskunvaimennus</li>
+          <li>✔ Hyvä pito vaikeissa maastoissa</li>
+          <li>✔ Kestävä runko</li>
+          <li>❌Raskas ajaa pitkillä matkoilla asfaltilla</li>
+          <li>❌Vaatii enemmän voimaa ylämäissä</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    
+  <div class="col-md-3">
+  <div class="card p-3 h-100 text-center shadow-sm" data-bs-toggle="modal" data-bs-target="#maantieModal" style="cursor:pointer;">
+    <img src="maantiepyora.jpg" class="img-fluid mb-2" alt="Maantiepyörä">
+    <h4>🏁 Maantiepyörä</h4>
+    <p>Nopea ja kevyt asfalttiajoon.</p>
+  </div>
+</div>
+
+    
+  <div class="modal fade" id="maantieModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">🏁 Maantiepyörä</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <img src="maantiepyora.jpg" class="img-fluid mb-3">
+
+        <p>Maantiepyörä on suunniteltu nopeaan ajoon kovalla alustalla.</p>
+
+        <ul>
+          <li>✔ Kevyt runko</li>
+          <li>✔ Kapeat renkaat</li>
+          <li>✔ Aerodynaaminen muotoilu</li>
+          <li>✔ Sopii pitkille matkoille</li>
+          <li>❌Ei sovi huonoille tai epätasaisille teille</li>
+          <li>❌Erittäin ohut rengas voi puhjeta helpommin</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="col-md-3">
+  <div class="card p-3 h-100 text-center shadow-sm" data-bs-toggle="modal" data-bs-target="#bmxModal" style="cursor:pointer;">
+    <img src="bmx.jpg" class="img-fluid mb-2" alt="BMX">
+    <h4>🤸 BMX</h4>
+    <p>Temppuihin ja skeittiparkkeihin.</p>
+  </div>
+</div>
+
+<div class="modal fade" id="bmxModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">🤸 BMX</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <img src="bmx.jpg" class="img-fluid mb-3" alt="BMX" >
+        <img src="" alt="" sizes="" srcset="">
+
+        <p>BMX on pieni ja kestävä pyörä temppuihin ja freestyle-ajoon.</p>
+
+        <ul>
+          <li>✔ Pieni runko</li>
+          <li>✔ Erittäin kestävä</li>
+          <li>✔ Sopii temppuihin</li>
+          <li>✔ Ei vaihteita</li>
+          <li>❌Ei vaihteita → raskas ylämäissä</li>
+         <li>❌Rajoitettu käyttö vain temppuihin ja puistoihin</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+   
+<div class="col-md-3">
+  <div class="card p-3 h-100 text-center shadow-sm" data-bs-toggle="modal" data-bs-target="#gravelModal" style="cursor:pointer;">
+    <img src="gravel.jpg" class="img-fluid mb-2">
+    <h4>🪨 Gravel</h4>
+    <p>Monipuolinen tie + sora + metsä.</p>
+  </div>
+</div>
+
+<div class="modal fade" id="gravelModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">🪨 Gravel</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <img src="gravel.jpg" class="img-fluid mb-3">
+
+        <p>Gravel-pyörä yhdistää maantie- ja maastopyörän ominaisuudet.</p>
+
+        <ul>
+          <li>✔ Monipuolinen käyttö</li>
+          <li>✔ Sopii sorateille</li>
+          <li>✔ Mukava pidemmillä matkoilla</li>
+          <li>✔ Vakaa ajo</li>
+          <li>❌Ei yhtä kestävä kuin maastopyörä äärireiteillä</li>
+          <li>❌Voi olla kallis verrattuna peruspyöriin</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+</body>
+</html>
